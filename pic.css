@@ -1,0 +1,6 @@
+.picArea {
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+    background-color: #333;
+}
