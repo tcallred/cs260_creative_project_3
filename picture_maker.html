@@ -11,17 +11,24 @@
 
     <div class="picArea container-flex">
         <div ng-repeat="img in images">
-            <img src="{{img.picUrl}}" style="width:{{img.picWidth}};z-index:{{img.picIndex}};position:absolute">
+            <img src="{{img.picUrl}}" style="width:{{img.picWidth}};z-index:{{img.picIndex}};position:absolute;left:{{img.picLeft}};top:{{img.picTop}}">
         </div>
     </div>
     <div class="control row">
-        <div class="layers col">
+        <div class="layers col-md-8">
             <h3>Layers:</h3>
-            <ul>
-                <li ng-repeat="img in images | orderBy: '-picIndex'">{{img.picName}} | Image width: <input type="number" ng-model="img.picWidth"> Image layer index: <input type="number" ng-model="img.picIndex"></li>
-            </ul>
+            <table>
+                <tr ng-repeat="img in images | orderBy: '-picIndex'">
+                    <td><strong>{{img.picName}}</strong>
+                    </td>
+                    <td>Image width: <input type="number" ng-model="img.picWidth"></td>
+                    <td>Image layer index: <input type="number" ng-model="img.picIndex"></td>
+                    <td>Left: <input type="number" ng-model="img.picLeft"></td>
+                    <td>Top: <input type="number" ng-model="img.picTop"></td>
+                </tr>
+            </table>
         </div>
-        <div class="add col">
+        <div class="add col-md-4">
             <h2>Add new image layer</h2>
             <form ng-submit="addImage(img)">
                 <input type="text" placeholder="Image name" ng-model="img.name">

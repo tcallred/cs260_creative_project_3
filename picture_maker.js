@@ -9,7 +9,9 @@ function mainCtrl($scope) {
             picName: img.name,
             picUrl: img.url,
             picWidth: 500,
-            picIndex: 1
+            picIndex: 1,
+            picLeft: 700,
+            picTop: 200
         });
         img.name = '';
         img.url = '';
