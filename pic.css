@@ -5,20 +5,20 @@
     background-color: #333;
 }
 
-img{border:solid 3px blue; margin:10px;}
-
-h3 {
-
-	width: 90px;
-	height: 40px;
-	background: mediumseagreen;
-	border-radius: 30px / 50px;
-
+.selected {
+    border: solid 3px rgb(39, 60, 184);
 }
 
-h2{
-  width: 310px;
-  height: 40px;
-  background: mediumseagreen;
-  border-radius: 30px / 50px;
+h3 {
+    width: 90px;
+    height: 40px;
+    background: mediumseagreen;
+    border-radius: 30px / 50px;
+}
+
+h2 {
+    width: 310px;
+    height: 40px;
+    background: mediumseagreen;
+    border-radius: 30px / 50px;
 }

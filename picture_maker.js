@@ -11,10 +11,24 @@ function mainCtrl($scope) {
             picWidth: 500,
             picIndex: 1,
             picLeft: 700,
-            picTop: 200
+            picTop: 200,
+            picSelected: false
         });
         img.name = '';
         img.url = '';
         console.log($scope.images);
+    }
+    $scope.selected = function(img) {
+        img.picSelected = true;
+    }
+    $scope.unselected = function(img) {
+        img.picSelected = false;
+    }
+    $scope.returnClass = function(img) {
+        if (img.picSelected) {
+            return 'selected';
+        } else {
+            return '';
+        }
     }
 }
